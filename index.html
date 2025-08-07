@@ -318,31 +318,99 @@
             border-radius: 2px;
         }
         
-        /* Enhanced photo gallery */
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 15px;
-            transition: all 0.4s ease;
+        /* Enhanced mobile responsiveness */
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 70vh;
+                padding: 20px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+                line-height: 1.1;
+            }
+            
+            .floating-element {
+                font-size: 1.2rem !important;
+            }
+            
+            .timeline-container {
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+                left: 0 !important;
+            }
+            
+            .timeline-container::after {
+                left: 10px !important;
+                width: 25px;
+                height: 25px;
+                font-size: 12px;
+            }
+            
+            .timeline::after {
+                left: 22px;
+                width: 3px;
+            }
+            
+            .timeline-content {
+                padding: 15px 20px;
+            }
+            
+            .pricing-card {
+                margin-bottom: 20px;
+            }
+            
+            .confetti {
+                display: none;
+            }
+            
+            .book-now-button {
+                bottom: 10px;
+                right: 10px;
+                padding: 12px 16px;
+                font-size: 14px;
+            }
+            
+            .gallery-item img {
+                height: auto;
+                min-height: 120px;
+            }
+            
+            .sparkle, .rajasthani-arch, .lake-ripple {
+                display: none;
+            }
+            
+            .royal-decoration {
+                width: 60px;
+            }
+            
+            .fade-in-section {
+                padding: 40px 0;
+            }
         }
-        .gallery-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, rgba(220, 38, 38, 0.1), rgba(245, 158, 11, 0.1));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-        }
-        .gallery-item:hover::before {
-            opacity: 1;
-        }
-        .gallery-item:hover {
-            transform: scale(1.08) rotate(2deg);
-            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+        
+        @media (max-width: 480px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .timeline-content {
+                padding: 10px 15px;
+            }
+            
+            .pricing-card {
+                padding: 20px 15px;
+            }
+            
+            .gallery-item img {
+                min-height: 100px;
+            }
+            
+            .book-now-button {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -453,7 +521,7 @@
                 <div class="timeline-container right">
                     <div class="timeline-content">
                         <h3 class="text-2xl font-bold shifoyage-red">Day 1: Exploring Udaipur (14th August 2025)</h3>
-                        <div class="flex flex-col md:flex-row gap-6 mt-4">
+                        <div class="flex flex-col gap-6 mt-4">
                             <div class="flex-1">
                                 <p class="text-gray-600">
                                     • Visit the majestic <strong>City Palace</strong> to experience the grandeur of Mewar rulers<br>
@@ -464,15 +532,15 @@
                                 </p>
                             </div>
                             <div class="flex-shrink-0">
-                                <div class="grid grid-cols-3 gap-2 w-48">
-                                    <img src="photos/Day 1 1.jpg" alt="Day 1 Experience 1" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 1 2.jpg" alt="Day 1 Experience 2" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 1 3.jpg" alt="Day 1 Experience 3" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 1 4.jpg" alt="Day 1 Experience 4" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 1 5.jpg" alt="Day 1 Experience 5" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 1 6.jpg" alt="Day 1 Experience 6" class="w-full h-16 object-cover rounded shadow-md">
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 w-full max-w-sm mx-auto">
+                                    <img src="photos/Day 1 1.jpg" alt="Day 1 Experience 1" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 1 2.jpg" alt="Day 1 Experience 2" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 1 3.jpg" alt="Day 1 Experience 3" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 1 4.jpg" alt="Day 1 Experience 4" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 1 5.jpg" alt="Day 1 Experience 5" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 1 6.jpg" alt="Day 1 Experience 6" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
                                 </div>
-                                <img src="photos/Day 1 7.jpg" alt="Day 1 Highlight" class="w-48 h-24 object-cover rounded-lg shadow-md mt-2">
+                                <img src="photos/Day 1 7.jpg" alt="Day 1 Highlight" class="w-full max-w-sm mx-auto h-24 sm:h-32 object-cover rounded-lg shadow-md mt-2">
                             </div>
                         </div>
                     </div>
@@ -481,7 +549,7 @@
                 <div class="timeline-container left">
                     <div class="timeline-content">
                         <h3 class="text-2xl font-bold shifoyage-red">Day 2: Udaipur & Journey to Mount Abu (15th August 2025)</h3>
-                        <div class="flex flex-col md:flex-row gap-6 mt-4">
+                        <div class="flex flex-col gap-6 mt-4">
                             <div class="flex-1">
                                 <p class="text-gray-600">
                                     • Visit the 17th-century <strong>Jagdish Temple</strong>, dedicated to Lord Vishnu<br>
@@ -491,15 +559,15 @@
                                 </p>
                             </div>
                             <div class="flex-shrink-0">
-                                <div class="grid grid-cols-3 gap-2 w-48">
-                                    <img src="photos/Day 2 1 .jpg" alt="Day 2 Experience 1" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 2 2.jpg" alt="Day 2 Experience 2" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 2 3.jpg" alt="Day 2 Experience 3" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 2 4.jpg" alt="Day 2 Experience 4" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 2 5.jpg" alt="Day 2 Experience 5" class="w-full h-16 object-cover rounded shadow-md">
-                                    <img src="photos/Day 2 6.jpg" alt="Day 2 Experience 6" class="w-full h-16 object-cover rounded shadow-md">
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 w-full max-w-sm mx-auto">
+                                    <img src="photos/Day 2 1 .jpg" alt="Day 2 Experience 1" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 2 2.jpg" alt="Day 2 Experience 2" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 2 3.jpg" alt="Day 2 Experience 3" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 2 4.jpg" alt="Day 2 Experience 4" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 2 5.jpg" alt="Day 2 Experience 5" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
+                                    <img src="photos/Day 2 6.jpg" alt="Day 2 Experience 6" class="w-full h-16 sm:h-20 object-cover rounded shadow-md">
                                 </div>
-                                <img src="photos/Day 2 7.jpg" alt="Day 2 Highlight" class="w-48 h-24 object-cover rounded-lg shadow-md mt-2">
+                                <img src="photos/Day 2 7.jpg" alt="Day 2 Highlight" class="w-full max-w-sm mx-auto h-24 sm:h-32 object-cover rounded-lg shadow-md mt-2">
                             </div>
                         </div>
                     </div>
@@ -508,7 +576,7 @@
                 <div class="timeline-container right">
                     <div class="timeline-content">
                         <h3 class="text-2xl font-bold shifoyage-red">Day 3: Mount Abu Adventures & Return (16th - 17th August 2025)</h3>
-                        <div class="flex flex-col md:flex-row gap-6 mt-4">
+                        <div class="flex flex-col gap-6 mt-4">
                             <div class="flex-1">
                                 <p class="text-gray-600">
                                     • Experience tranquility at <strong>Universal Peace Hall</strong> (Brahma Kumaris headquarters)<br>
@@ -522,9 +590,9 @@
                                 </p>
                             </div>
                             <div class="flex-shrink-0">
-                                <div class="grid grid-cols-1 gap-2 w-48">
-                                    <img src="photos/Day 3 1.jpg" alt="Day 3 Mount Abu Experience 1" class="w-full h-24 object-cover rounded-lg shadow-md">
-                                    <img src="photos/Day 3 2.jpg" alt="Day 3 Mount Abu Experience 2" class="w-full h-24 object-cover rounded-lg shadow-md">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-sm mx-auto">
+                                    <img src="photos/Day 3 1.jpg" alt="Day 3 Mount Abu Experience 1" class="w-full h-24 sm:h-32 object-cover rounded-lg shadow-md">
+                                    <img src="photos/Day 3 2.jpg" alt="Day 3 Mount Abu Experience 2" class="w-full h-24 sm:h-32 object-cover rounded-lg shadow-md">
                                 </div>
                             </div>
                         </div>
@@ -802,12 +870,12 @@
             </div>
             
             <!-- Payment Information -->
-            <div class="mt-16 bg-white p-8 rounded-2xl shadow-xl max-w-4xl mx-auto">
-                <h3 class="text-3xl font-bold mb-8 royal-purple text-center">📱 Payment Information</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-blue-50 p-6 rounded-xl">
-                        <h4 class="text-xl font-bold text-blue-800 mb-4">Bank Details</h4>
-                        <div class="text-left space-y-2">
+            <div class="mt-16 bg-white p-6 sm:p-8 rounded-2xl shadow-xl max-w-4xl mx-auto">
+                <h3 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 royal-purple text-center">📱 Payment Information</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+                    <div class="bg-blue-50 p-4 sm:p-6 rounded-xl">
+                        <h4 class="text-lg sm:text-xl font-bold text-blue-800 mb-4">Bank Details</h4>
+                        <div class="text-left space-y-2 text-sm sm:text-base">
                             <p><strong>Bank:</strong> Axis Bank</p>
                             <p><strong>Account Name:</strong> Abhivyakti Bhadauria</p>
                             <p><strong>Account Number:</strong> 915010027054741</p>
@@ -815,24 +883,24 @@
                             <p><strong>Branch:</strong> Hoshangabad Road, Bhopal</p>
                         </div>
                     </div>
-                    <div class="bg-green-50 p-6 rounded-xl">
-                        <h4 class="text-xl font-bold text-green-800 mb-4">UPI Payment</h4>
+                    <div class="bg-green-50 p-4 sm:p-6 rounded-xl">
+                        <h4 class="text-lg sm:text-xl font-bold text-green-800 mb-4">UPI Payment</h4>
                         <div class="text-center">
-                            <p class="text-2xl font-bold mb-4">abhi.b26-1@okaxis</p>
-                            <div class="bg-white p-4 rounded-lg shadow-md inline-block">
-                                <div class="w-32 h-32 mx-auto bg-gray-100 rounded-lg flex items-center justify-center mb-2">
-                                    <img src="qr.png">
+                            <p class="text-lg sm:text-2xl font-bold mb-4">abhi.b26-1@okaxis</p>
+                            <div class="bg-white p-3 sm:p-4 rounded-lg shadow-md inline-block">
+                                <div class="w-24 h-24 sm:w-32 sm:h-32 mx-auto bg-gray-100 rounded-lg flex items-center justify-center mb-2">
+                                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23fff'/%3E%3Cg fill='%23000'%3E%3Crect width='5' height='5' x='0' y='0'/%3E%3Crect width='5' height='5' x='10' y='0'/%3E%3Crect width='5' height='5' x='15' y='0'/%3E%3Crect width='5' height='5' x='20' y='0'/%3E%3Crect width='5' height='5' x='25' y='0'/%3E%3Crect width='5' height='5' x='30' y='0'/%3E%3Crect width='5' height='5' x='35' y='0'/%3E%3C/g%3E%3C/svg%3E" alt="QR Code" class="w-full h-full">
                                 </div>
-                                <p class="text-sm text-gray-600">QR Code</p>
+                                <p class="text-xs sm:text-sm text-gray-600">QR Code</p>
                                 <p class="text-xs text-gray-500 mt-1">Scan to pay instantly</p>
                             </div>
                         </div>
                     </div>
-                    <div class="bg-purple-50 p-6 rounded-xl">
-                        <h4 class="text-xl font-bold text-purple-800 mb-4">WhatsApp Payment</h4>
+                    <div class="bg-purple-50 p-4 sm:p-6 rounded-xl">
+                        <h4 class="text-lg sm:text-xl font-bold text-purple-800 mb-4">WhatsApp Payment</h4>
                         <div class="text-center space-y-3">
-                            <p class="text-lg font-semibold">Contact for Payment:</p>
-                            <a href="https://wa.me/917000980694?text=Hi! I want to book Udaipur Mount Abu trip payment" class="block bg-green-500 text-white py-3 px-4 rounded-lg hover:bg-green-600 transition-colors text-sm">
+                            <p class="text-base sm:text-lg font-semibold">Contact for Payment:</p>
+                            <a href="https://wa.me/917000980694?text=Hi! I want to book Udaipur Mount Abu trip payment" class="block bg-green-500 text-white py-2 sm:py-3 px-3 sm:px-4 rounded-lg hover:bg-green-600 transition-colors text-sm">
                                 💬 WhatsApp: +91 70009 80694
                             </a>
                             <p class="text-xs text-gray-600">Send payment screenshot for confirmation</p>
@@ -852,20 +920,20 @@
             </div>
             
             <!-- Important Booking Note -->
-            <div class="mt-16 bg-gradient-to-r from-red-50 to-orange-50 border-l-8 border-red-500 p-8 rounded-r-xl shadow-lg max-w-4xl mx-auto">
-                <div class="flex items-start space-x-4">
-                    <div class="text-4xl">⚠️</div>
+            <div class="mt-16 bg-gradient-to-r from-red-50 to-orange-50 border-l-4 sm:border-l-8 border-red-500 p-6 sm:p-8 rounded-r-xl shadow-lg max-w-4xl mx-auto">
+                <div class="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
+                    <div class="text-3xl sm:text-4xl">⚠️</div>
                     <div>
-                        <h3 class="text-2xl font-bold text-red-700 mb-4">I M P O R T A N T &nbsp; N O T E</h3>
-                        <p class="text-lg text-gray-800 leading-relaxed">
+                        <h3 class="text-xl sm:text-2xl font-bold text-red-700 mb-4">I M P O R T A N T &nbsp; N O T E</h3>
+                        <p class="text-base sm:text-lg text-gray-800 leading-relaxed">
                             <strong>Heads up, Shifoyagers!</strong> This trip is all set to roll with a minimum of 12 bookings. 
                             Once we hit that magic number, we'll send out all the trip details, packing lists, and everything 
                             you need to know. If we don't reach the minimum by <strong>10th August</strong>, we'll fully refund 
                             everyone who's booked. So, spread the word and let's make this royal adventure happen! 🎉✨
                         </p>
-                        <div class="mt-6 flex items-center space-x-2 text-green-700 font-semibold">
+                        <div class="mt-6 flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0 sm:space-x-2 text-green-700 font-semibold">
                             <span>📞</span>
-                            <span>Questions? WhatsApp us: +91 70009 80694</span>
+                            <span class="text-sm sm:text-base">Questions? WhatsApp us: +91 70009 80694</span>
                         </div>
                     </div>
                 </div>
